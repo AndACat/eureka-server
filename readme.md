@@ -1,3 +1,4 @@
 - 本项目是自己学习部署eureka服务器时，所搭建的服务器源码
 - 使用时，需要先下载该项目，修改application.yml文件，本项目默认的eureka服务器端口号port为10000
 - 修改完成后，使用maven package打包为一个jar，然后到云服务器上运行。
+- scripts/start.sh为部署到linux上时，可能用到的脚本
