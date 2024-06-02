@@ -1,0 +1,22 @@
+server:
+  # 设置端口号
+  port: 10000
+spring:
+  application:
+    name: eurekaserver
+eureka:
+  instance:
+    # 单机hostname为localhost
+    hostname: localhost
+    # 如果启用了ip注册地址，那么篡改了hosts文件也没用，会让hostname无效，显示的ip地址
+    prefer-ip-address: false
+  client:
+    # 是否从Eureka Server获取注册信息 这里是单机部署，先设置false
+    fetch-registry: false
+    # 是否将自己注册到Eureka Server
+    # 因为这里是集群所以需要将自己注册到Eureka Server，单机则不需要  这里是单机部署，先设置false
+    register-with-eureka: false
+    # service-url:
+      # 配置其他集群的地址进行相互注册
+      # defaultZone: 	http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+
